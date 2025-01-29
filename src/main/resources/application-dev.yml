@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: forum
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/forum
+    username: root
+    password: admin
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  cache:
+    type: redis
+
+  redis:
+    host: localhost
+    port: 6379
+
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: 099d2d51fa90c7
+    password: cae2dc73e6b0eb
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        debug: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: secret
